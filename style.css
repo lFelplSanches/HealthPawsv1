@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fdeae3;
+}
+
+.menu-lateral {
+  background-color: #070a06;
+  color: #20c6d6;
+  padding: 20px;
+  min-width: 250px;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-lateral ul li a {
+  color: #fdeae3;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.conteudo {
+  flex: 1;
+  padding: 20px;
+}
+
+button {
+  background-color: #20c6d6;
+  color: #070a06;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  width: 60px;
+  height: 60px;
+}
+
+#tabela-resultados {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#tabela-resultados th, #tabela-resultados td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
