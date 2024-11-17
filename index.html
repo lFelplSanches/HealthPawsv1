@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,67 +16,73 @@
     </ul>
   </div>
 
-  <div class="conteudo">
-    <form id="cadastro-pet">
-      <div class="etapa">
-        <h2>Etapa 1: Informações Básicas</h2>
-        <label for="nome">Nome do Pet:</label>
-        <input type="text" id="nome" required>
-        
-        <label for="especie">Espécie:</label>
-        <select id="especie">
-          <option value="cao">Cão</option>
-          <option value="gato">Gato</option>
-        </select>
-        
-        <label for="raca">Raça:</label>
-        <input type="text" id="raca">
-      </div>
+  <div class="banners">
+    <div class="banner ativo" id="etapa1">
+      <h2>Etapa 1: Informações Básicas</h2>
+      <label for="nome">Nome do Pet:</label>
+      <input type="text" id="nome" required>
 
-      <div class="etapa">
-        <h2>Etapa 2: Características</h2>
-        <label for="atividade">Nível de Atividade:</label>
-        <select id="atividade">
-          <option value="baixa">Baixa</option>
-          <option value="moderada">Moderada</option>
-          <option value="alta">Alta</option>
-        </select>
+      <label for="especie">Espécie:</label>
+      <select id="especie">
+        <option value="cao">Cão</option>
+        <option value="gato">Gato</option>
+      </select>
 
-        <label for="estado">Gestante/Lactante:</label>
-        <select id="estado">
-          <option value="nao">Não</option>
-          <option value="sim">Sim</option>
-        </select>
+      <label for="raca">Raça:</label>
+      <input type="text" id="raca">
 
-        <label for="idade">Idade (meses):</label>
-        <input type="number" id="idade" required>
-        
-        <label for="peso">Peso (kg):</label>
-        <input type="number" id="peso" required>
-      </div>
-
-      <div class="etapa">
-        <h2>Etapa 3: Saúde e Ração</h2>
-        <label for="problema">Problema de Saúde:</label>
-        <input type="text" id="problema">
-        
-        <label for="tamanho-pacote">Tamanho do Pacote (kg):</label>
-        <select id="tamanho-pacote">
-          <option value="5">5</option>
-          <option value="10">10</option>
-          <option value="15">15</option>
-          <option value="20">20</option>
-        </select>
-      </div>
-
-      <button id="calcular" type="button">Calcular</button>
-    </form>
-
-    <div id="resultados">
-      <h2>Resultados</h2>
-      <table id="tabela-resultados"></table>
-      <canvas id="grafico"></canvas>
+      <button class="proximo">Próximo</button>
     </div>
+
+    <div class="banner" id="etapa2">
+      <h2>Etapa 2: Características</h2>
+      <label for="atividade">Nível de Atividade:</label>
+      <select id="atividade">
+        <option value="baixa">Baixa</option>
+        <option value="moderada">Moderada</option>
+        <option value="alta">Alta</option>
+      </select>
+
+      <label for="estado">Gestante/Lactante:</label>
+      <select id="estado">
+        <option value="nao">Não</option>
+        <option value="sim">Sim</option>
+      </select>
+
+      <label for="idade">Idade (anos):</label>
+      <input type="number" id="idade" required>
+
+      <label for="peso">Peso (kg):</label>
+      <input type="number" id="peso" required>
+
+      <button class="anterior">Anterior</button>
+      <button class="proximo">Próximo</button>
+    </div>
+
+    <div class="banner" id="etapa3">
+      <h2>Etapa 3: Saúde e Ração</h2>
+      <label for="problema">Problema de Saúde:</label>
+      <input type="text" id="problema">
+
+      <label for="tamanho-pacote">Tamanho do Pacote (kg):</label>
+      <select id="tamanho-pacote">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+      </select>
+
+      <button class="anterior">Anterior</button>
+      <button id="calcular">Calcular</button>
+    </div>
+  </div>
+
+  <div id="resultados">
+    <h2>Resultados</h2>
+    <table id="tabela-resultados"></table>
+    <canvas id="grafico"></canvas>
+    <h3>Análise Comparativa e Econômica</h3>
+    <p id="analise-comparativa"></p>
   </div>
 
   <script src="script.js"></script>
