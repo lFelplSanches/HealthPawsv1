@@ -18,10 +18,11 @@ function calcular() {
   ];
 
   const peso = parseFloat(document.getElementById('peso').value);
-  const consumoDiario = peso * 10; // Fórmula simplificada
+  const consumoDiario = peso * 10; // Fórmula simplificada: peso em kg × 10g por kg
 
   const resultados = dadosCSV.map(racao => {
-    const custoDiario = (racao.preco / racao.pesoPacote) * consumoDiario;
+    const precoPorGrama = racao.preco / (racao.pesoPacote * 1000); // Preço total dividido pelo peso do pacote em gramas
+    const custoDiario = consumoDiario * precoPorGrama;
     const duracao = (racao.pesoPacote * 1000) / consumoDiario;
     return { ...racao, custoDiario: custoDiario.toFixed(2), duracao: duracao.toFixed(1) };
   });
@@ -44,7 +45,7 @@ function calcular() {
       <tr>
         <td>${r.nome}</td>
         <td>${r.preco}</td>
-        <td>${(peso * 10).toFixed(2)}</td>
+        <td>${consumoDiario.toFixed(2)}</td>
         <td>${r.custoDiario}</td>
         <td>${r.duracao}</td>
         <td><a href="${r.link}" target="_blank">Comprar</a></td>
